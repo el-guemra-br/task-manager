@@ -1,6 +1,6 @@
 # Task Manager
 
-This folder contains a standalone Task Manager app used by the Featured Work section.
+Task tracking web app .
 
 ## Files
 - `index.html` - structure and UI
