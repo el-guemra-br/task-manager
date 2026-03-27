@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">PRODUCTIVITY HUB</p>
+        <h1>Task Manager</h1>
+        <p>Plan your day, prioritize what matters, and track progress in real time.</p>
+      </div>
+      <div class="hero-accent" aria-hidden="true"></div>
+    </header>
+
+    <section class="task-input">
+      <input id="task-title" type="text" placeholder="Task name..." maxlength="120">
+      <textarea id="task-description" placeholder="Task description..." maxlength="400"></textarea>
+      <div class="task-input-row">
+        <input id="task-date" type="date" aria-label="Task date">
+        <button id="add-task">Add</button>
+      </div>
+    </section>
+
+    <section class="task-controls">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="active">Active</button>
+      <button class="filter-btn" data-filter="done">Done</button>
+      <button id="clear-done" class="danger">Clear Done</button>
+    </section>
+
+    <section class="stats" aria-label="Task stats">
+      <div class="stat-card">
+        <span>Total</span>
+        <strong id="total-count">0</strong>
+      </div>
+      <div class="stat-card">
+        <span>Active</span>
+        <strong id="active-count">0</strong>
+      </div>
+      <div class="stat-card">
+        <span>Done</span>
+        <strong id="done-count">0</strong>
+      </div>
+    </section>
+
+    <ul id="task-list" class="task-list" aria-live="polite"></ul>
+
+    <footer>
+      <small id="task-count">0 tasks</small>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
