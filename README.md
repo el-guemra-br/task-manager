@@ -1,3 +1,11 @@
+
+<p align ="left">
+  <img src="task-manager-showcase.png" alt="Description" width="600">
+</p>
+
+
+
+
 # Task Manager
 
 Task tracking web app .
