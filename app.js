@@ -87,7 +87,9 @@ function render() {
     filtered.forEach((task) => {
       const li = document.createElement("li");
       li.className = `task-item ${task.done ? "done" : ""}`;
-      const safeDescription = task.description ? escapeHtml(task.description) : "";
+      const safeDescription = task.description
+        ? escapeHtml(task.description)
+        : "No description";
       const dueDateLabel = task.dueDate ? formatTaskDate(task.dueDate) : "No date";
       const createdAtLabel = task.createdAt ? formatTaskDate(task.createdAt) : "Unknown";
 
@@ -95,7 +97,7 @@ function render() {
         <input type="checkbox" ${task.done ? "checked" : ""} aria-label="Toggle task">
         <div class="task-content">
           <span class="title">${escapeHtml(task.title)}</span>
-          ${safeDescription ? `<p class="description">${safeDescription}</p>` : ""}
+          <p class="description">${safeDescription}</p>
           <div class="task-meta">
             <span class="task-date">Due: ${dueDateLabel}</span>
             <span class="task-created">Created: ${createdAtLabel}</span>

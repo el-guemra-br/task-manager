@@ -8,7 +8,7 @@ This folder contains a standalone Task Manager app used by the Featured Work sec
 - `app.js` - app logic with localStorage persistence
 
 ## Features
-- Add tasks
+- Add tasks with name, description, and due date
 - Mark tasks as done
 - Delete tasks
 - Filter by all/active/done
